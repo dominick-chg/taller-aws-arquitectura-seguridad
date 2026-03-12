@@ -1,0 +1,15 @@
+# ──────────────────────────────────────────────
+# Documentos internos — no deben exponerse al público
+# ──────────────────────────────────────────────
+docs/
+
+# Archivos de configuración del agente de IA
+.gemini/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+*.swp
