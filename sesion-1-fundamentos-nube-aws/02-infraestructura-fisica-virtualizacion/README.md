@@ -16,7 +16,7 @@ El viaje hacia la nube comenzó cuando aprendimos a consolidar todo ese pesado h
 
 ---
 
-## 2.1 🏭 Centros de Datos Modernos
+## 2.1 🏭 Centros de Datos
 Un **Data Center (DC)** no es simplemente una "habitación grande con computadoras", sino una obra maestra de ingeniería civil, eléctrica y de red, clasificada típicamente por los estándares Tiers (I al IV) según su tolerancia a fallos. En la escala Cloud, operan los llamados **Hyperscale Datacenters**.
 
 *   **Edificación y Facilidades:**
@@ -35,10 +35,10 @@ Un **Data Center (DC)** no es simplemente una "habitación grande con computador
 ## 2.2 🧠 Virtualización y Abstracción
 La virtualización es el motor tecnológico indispensable que permite el Cloud Computing. Sin ella, los Centros de Datos serían ineficientes y rígidos.
 
-### 🌀 1. Fundamentos de la Virtualización (FR-09)
+### 🌀 1. Fundamentos de la Virtualización
 Históricamente, el sistema operativo (OS) estaba rígidamente ligado al hardware físico. Esto causaba que un servidor potente promediara apenas un 15% de uso operativo, ya que no se podían mezclar aplicaciones incompatibles en el mismo OS. La virtualización rompe este vínculo mediante la **Abstracción**, permitiendo la **Consolidación** masiva: ejecutar múltiples sistemas independientes sobre un solo recurso físico.
 
-### 🔀 2. Ámbitos de la Virtualización (FR-10)
+### 🔀 2. Ámbitos de la Virtualización
 Aunque solemos pensar solo en servidores, la virtualización ocurre en tres planos críticos en la nube:
 *   **Virtualización de Servidores:** Creación de entornos operativos aislados (VMs) sobre hardware físico. Es la base del cómputo cloud.
 *   **Virtualización de Red (SDN):** Abstracción de los planos de control y de datos. Permite crear redes, subredes y firewalls mediante software sin tocar cables.
@@ -153,9 +153,9 @@ Dependiendo de dónde se instalan respecto al hardware, se clasifican en dos tip
 ## 2.3 📈 Evolución Hacia la Nube
 El salto tecnológico que definió la modernidad no fue instantáneo, sino una evolución del modelo de negocio y control:
 
-1.  **Infraestructura On-Premise (Propiedad - FR-13):** Las organizaciones compraban y mantenían sus propios servidores. Rigidez física y ciclos de entrega lentos (CapEx pesado).
-2.  **Hosting y Colocación (Arrendamiento - FR-14):** Alquiler de espacio y hardware. Eliminó la gestión física del edificio, pero mantuvo la rigidez del contrato.
-3.  **Surgimiento del Modelo Cloud (Consumo - FR-15):** La era de los **Hyperscalers**. Orquestación masiva mediante APIs y auto-servicio. La infraestructura se vuelve código e industrialización a escala global (OpEx puro).
+1.  **Infraestructura On-Premise (Propiedad):** Las organizaciones compraban y mantenían sus propios servidores. Rigidez física y ciclos de entrega lentos (CapEx pesado).
+2.  **Hosting y Colocación (Arrendamiento):** Alquiler de espacio y hardware. Eliminó la gestión física del edificio, pero mantuvo la rigidez del contrato.
+3.  **Surgimiento del Modelo Cloud (Consumo):** La era de los **Hyperscalers**. Orquestación masiva mediante APIs y auto-servicio. La infraestructura se vuelve código e industrialización a escala global (OpEx puro).
 
 ---
 

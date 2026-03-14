@@ -18,7 +18,7 @@ En el Módulo 4 aprendimos *dónde* vive AWS: Regiones, AZs, PoPs. Ahora llega l
 
 ## 5.1 🗂️ Categorías de Servicios de AWS
 
-### 🧩 0. La Jerarquía del Portafolio (FR-43)
+### 🧩 0. La Jerarquía del Portafolio
 El portafolio de AWS no es una lista plana de herramientas; es una **arquitectura de dominos funcionales**. Cada categoría agrupa servicios que resuelven un mismo tipo de problema técnico, lo que permite:
 *   **Diseñar por capas:** Seleccionar el servicio correcto en cada capa de una arquitectura (datos, cómputo, red, seguridad).
 *   **Navegar el catálogo:** Evitar la parálisis ante más de 200 servicios disponibles, encontrando rápidamente el dominio relevante.
@@ -38,7 +38,7 @@ graph TD
 
 ---
 
-### ⚙️ 1. Cómputo (FR-44)
+### ⚙️ 1. Cómputo
 La categoría de **Cómputo** agrupa todos los servicios que proveen **capacidad de procesamiento**. Representa la evolución del servidor físico del Módulo 2, ahora consumido como un servicio bajo demanda.
 
 Existen tres modelos fundamentales, diferenciados por el nivel de control que el usuario retiene sobre el entorno de ejecución:
@@ -54,7 +54,7 @@ Existen tres modelos fundamentales, diferenciados por el nivel de control que el
 
 ---
 
-### 🌐 2. Redes y Entrega de Contenido (FR-45)
+### 🌐 2. Redes y Entrega de Contenido
 La categoría de **Redes** provee los servicios que permiten **definir, controlar y optimizar la conectividad** entre todos los demás recursos de una arquitectura.
 
 Sus funciones clave incluyen:
@@ -65,7 +65,7 @@ Sus funciones clave incluyen:
 
 ---
 
-### 💾 3. Almacenamiento (FR-46)
+### 💾 3. Almacenamiento
 La categoría de **Almacenamiento** provee soluciones de persistencia de datos bajo tres paradigmas técnicos distintos, cada uno optimizado para un patrón de acceso diferente:
 
 | Paradigma | Descripción | Característica Clave |
@@ -79,7 +79,7 @@ La categoría de **Almacenamiento** provee soluciones de persistencia de datos b
 
 ---
 
-### 🗄️ 4. Bases de Datos (FR-47)
+### 🗄️ 4. Bases de Datos
 La categoría de **Bases de Datos** provee sistemas de almacenamiento y consulta de datos **gestionados por AWS**: el proveedor se encarga de las tareas operativas (parches del motor, backups, alta disponibilidad), mientras el usuario se enfoca en el diseño del esquema y las consultas.
 
 El criterio de clasificación más fundamental divide los sistemas en dos grandes familias:
@@ -96,7 +96,7 @@ El criterio de clasificación más fundamental divide los sistemas en dos grande
 
 ---
 
-### 🔗 5. Integración de Aplicaciones (FR-48)
+### 🔗 5. Integración de Aplicaciones
 Conforme una arquitectura crece, sus componentes deben comunicarse sin depender directamente los unos de los otros. Esta categoría provee los servicios de **mensajería y eventos** que hacen posible el **desacoplamiento**.
 
 *   **¿Qué es el desacoplamiento?** Un sistema está acoplado cuando el fallo o la lentitud de un componente afecta directamente a los otros. Desacoplarlos significa que la comunicación ocurre de forma **asíncrona**: el emisor envía un mensaje y continúa su trabajo sin esperar una respuesta inmediata.
@@ -106,7 +106,7 @@ Conforme una arquitectura crece, sus componentes deben comunicarse sin depender 
 
 ---
 
-### 🔒 6. Seguridad e Identidad (FR-49)
+### 🔒 6. Seguridad e Identidad
 Esta categoría es transversal a todas las demás: no es una capa que se añade al final, sino un principio que se diseña desde el primer recurso. Sus tres pilares son:
 
 *   **Gestión de Identidades y Acceso Granular:** El sistema que define *quién* (usuarios humanos, aplicaciones, servicios) puede realizar *qué acción* sobre *qué recurso* bajo *qué condición*. El principio rector es el **Menor Privilegio**: cada entidad tiene exactamente los permisos que necesita, ni uno más.
@@ -120,7 +120,7 @@ Esta categoría es transversal a todas las demás: no es una capa que se añade 
 
 ---
 
-### 📊 7. Gestión y Gobernanza (FR-50)
+### 📊 7. Gestión y Gobernanza
 No puedes gestionar lo que no puedes ver. Esta categoría provee la **observabilidad operativa** y las herramientas de **cumplimiento** para operar plataformas en producción con confianza.
 
 *   **Observabilidad (Métricas, Logs, Trazas):** Recolección y análisis en tiempo real del comportamiento de los recursos (uso de CPU, errores, tiempos de respuesta). Permite definir alarmas para reaccionar ante anomalías antes de que se conviertan en incidentes.
@@ -129,7 +129,7 @@ No puedes gestionar lo que no puedes ver. Esta categoría provee la **observabil
 
 ---
 
-### 📈 8. Análisis de Datos (FR-51)
+### 📈 8. Análisis de Datos
 Cuando el volumen de datos supera la capacidad de una base de datos transaccional tradicional, esta categoría provee la infraestructura para construir **plataformas de datos a escala**.
 
 *   **Data Lake:** Repositorio centralizado que almacena datos en su formato original (estructurado, semiestructurado y no estructurado) a escala masiva y bajo costo. Es la "materia prima" de la plataforma analítica.
@@ -139,7 +139,7 @@ Cuando el volumen de datos supera la capacidad de una base de datos transacciona
 
 ---
 
-### 🤖 9. Inteligencia Artificial y Machine Learning (FR-52)
+### 🤖 9. Inteligencia Artificial
 Esta categoría democratiza el acceso a la inteligencia artificial, eliminando la necesidad de construir infraestructura de ML desde cero.
 
 *   **Entrenamiento de Modelos:** Plataformas que proveen el entorno integrado (cómputo de GPU, almacenamiento, herramientas de experimentación) para el ciclo completo de vida de un modelo de ML: preparación de datos, entrenamiento, evaluación y despliegue.
@@ -214,7 +214,7 @@ En la práctica, muchos equipos por defecto usan instancias virtuales para todo 
 
 Ahora que conocemos las categorías, profundizamos en los 6 servicios que forman la columna vertebral de casi cualquier arquitectura en AWS: los bloques con los que se construye el 80% de las soluciones del mundo real.
 
-### 🖥️ 1. Amazon EC2 — Cómputo Virtual (FR-53)
+### 🖥️ 1. Amazon EC2
 **Amazon EC2 (Elastic Compute Cloud)** es el servicio de instancias virtuales de AWS. Proporciona capacidad de procesamiento configurable bajo demanda: tú eliges el tipo de CPU, la cantidad de RAM y el sistema operativo.
 
 **Familias de Instancias:**
@@ -233,7 +233,7 @@ Ahora que conocemos las categorías, profundizamos en los 6 servicios que forman
 
 ---
 
-### 💿 2. Amazon EBS — Almacenamiento en Bloque para EC2 (FR-54)
+### 💿 2. Amazon EBS
 **Amazon EBS (Elastic Block Store)** proporciona volúmenes de almacenamiento en bloque persistentes adjuntados a instancias EC2. Funciona como el disco duro de una instancia virtual.
 
 **Tipos de Volumen:**
@@ -253,7 +253,7 @@ Ahora que conocemos las categorías, profundizamos en los 6 servicios que forman
 
 ---
 
-### 🌐 3. Amazon VPC — La Red Privada en la Nube (FR-55)
+### 🌐 3. Amazon VPC
 **Amazon VPC (Virtual Private Cloud)** permite definir una red virtual lógicamente aislada dentro de AWS. Es el equivalente a construir tu propio centro de datos de red, pero sobre la infraestructura global de AWS.
 
 **Arquitectura de una VPC Clásica:**
@@ -277,7 +277,7 @@ graph TD
 
 ---
 
-### 🪣 4. Amazon S3 — Almacenamiento de Objetos (FR-56)
+### 🪣 4. Amazon S3
 **Amazon S3 (Simple Storage Service)** es el servicio de almacenamiento de objetos de AWS. Almacena cualquier tipo de dato (imágenes, videos, logs, backups, modelos ML) con una durabilidad de **99.999999999% (11 nueves)**.
 
 **Estructura:**
@@ -297,7 +297,7 @@ graph TD
 
 ---
 
-### 🗄️ 5. Amazon RDS — Base de Datos Relacional Gestionada (FR-57)
+### 🗄️ 5. Amazon RDS
 **Amazon RDS (Relational Database Service)** gestiona bases de datos relacionales eliminando las tareas operativas: parches del motor, backups automáticos, escalado de almacenamiento y alta disponibilidad.
 
 **Motores Compatibles:** PostgreSQL, MySQL, MariaDB, Oracle, SQL Server y **Amazon Aurora** (motor propietario de AWS, compatible con MySQL y PostgreSQL, con hasta 5x más rendimiento).
@@ -312,7 +312,7 @@ graph TD
 
 ---
 
-### ⚡ 6. Amazon DynamoDB — Base de Datos NoSQL de Ultra-Escala (FR-58)
+### ⚡ 6. Amazon DynamoDB
 **Amazon DynamoDB** es la base de datos NoSQL serverless y totalmente gestionada de AWS, diseñada para cargas de trabajo que requieren latencia de milisegundos de un solo dígito a cualquier escala.
 
 **Modelo de Datos:**
@@ -336,7 +336,7 @@ graph TD
 
 ---
 
-## 🖼️ Visualización: Arquitectura de Referencia de 3 Capas (NRF-11)
+## 🖼️ Visualización: Arquitectura de Referencia de 3 Capas
 
 Este diagrama muestra los 6 servicios fundamentales en una arquitectura Multi-AZ real. Cada AZ contiene su propia subred de cómputo y su propia subred de datos, garantizando que ningún fallo de zona afecte al sistema completo.
 
@@ -459,5 +459,5 @@ La pregunta de "¿SQL o NoSQL?" es una de las más debatidas en diseño de siste
 - [ ] ¿Puedo explicar para qué sirve cada familia de instancias EC2 y cuándo usaría cada una?
 - [ ] ¿Sé la diferencia entre EBS (bloque) y S3 (objeto) y por qué no son intercambiables?
 - [ ] ¿Entiendo qué hace una subred pública vs. privada en una VPC y por qué las bases de datos van en la privada?
-- [ ] ¿Puedo describir la arquitectura de 3 capas del diagrama NRF-11 y explicar el rol de cada servicio?
+- [ ] ¿Puedo describir la arquitectura de 3 capas del diagrama y explicar el rol de cada servicio?
 - [ ] ¿Entiendo la diferencia entre Multi-AZ (HA) y Read Replicas (escala) en RDS?

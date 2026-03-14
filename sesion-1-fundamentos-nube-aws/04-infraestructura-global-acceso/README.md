@@ -1,8 +1,8 @@
 # Módulo 4 - Infraestructura Global y Acceso a Servicios
 
-## 📅 Metadatos y Objetivos
+## 📅 Objetivos
 - **Tiempo estimado:** 20 minutos (RF-02)
-- **Audiencia:** Estudiantes de TI con bases en redes y virtualización (NRF-1).
+- **Audiencia:** Estudiantes de TI con bases en redes y virtualización.
 - **Objetivos de aprendizaje:**
     - Comprender la arquitectura física y lógica de la **Infraestructura Global de AWS**.
     - Diferenciar entre Regiones, Zonas de Disponibilidad y servicios globales.
@@ -26,8 +26,8 @@ Como **Nube Pública**, el punto de entrada inicial para cualquier usuario o apl
 
 ### 🕸️ 1. El Backbone Global
 A diferencia de otros proveedores que dependen de la Internet pública, AWS ha diseñado una infraestructura de red para la **resiliencia sistémica** mediante un **Backbone de Red de Fibra Privada** mundial.
-*   **Aislamiento de la Red Pública:** Al evitar la Internet pública, AWS reduce drásticamente los puntos de fallo, la latencia y los vectores de ataque (DDoS).
-*   **Entrega de Servicios Globales:** Este tejido de fibra es el responsable de replicar instantáneamente las configuraciones de servicios globales (como IAM o Route 53) en todo el planeta, garantizando que el plano de control sea altamente resiliente.
+*   **Aislamiento de la Red Pública:** Al evitar la Internet pública, AWS reduce drásticamente los puntos de fallo, la latencia y los vectores de ataque (como DDoS).
+*   **Entrega de Servicios Globales:** Este tejido de fibra es el responsable de replicar instantáneamente las configuraciones de servicios globales en todo el planeta, garantizando que el plano de control sea altamente resiliente.
 
 ### 📍 2. Regiones de AWS
 Una **Región** es un área geográfica aislada que agrupa toda la infraestructura necesaria para operar de forma autónoma.
@@ -62,7 +62,7 @@ La selección de la región es una decisión crítica de arquitectura basada en 
 
 ---
 
-## 🖼️ Visualización: Jerarquía de Infraestructura Global (NRF-9)
+## 🖼️ Visualización: Jerarquía de Infraestructura Global
 
 ```mermaid
 graph TD
@@ -97,7 +97,7 @@ graph TD
 
 ---
 
-## 4.2 ⚡ Infraestructura de Borde (Edge Infrastructure)
+## 4.2 ⚡ Infraestructura de Borde
 
 ### 🌎 1. El Concepto de "Borde"
 El **Edge Computing (Computación en el Borde)** consiste en acercar el procesamiento y los datos lo más posible al usuario final.
@@ -124,7 +124,7 @@ Es el servicio de **Red de Entrega de Contenido (Content Delivery Network - CDN)
 
 ---
 
-## 🖼️ Visualización: Flujo de Tráfico desde el Borde (NRF-10)
+## 🖼️ Visualización: Flujo de Tráfico desde el Borde
 
 ```mermaid
 graph LR
@@ -163,7 +163,7 @@ Imagina una aplicación bancaria crítica operando en la región de **sa-east-1*
 2.  **Evento Disruptivo:** Un fallo masivo en la red eléctrica deja inoperativa a toda la **AZ 1** (incluyendo el centro de datos principal).
 3.  **Proceso de Failover:**
     *   **Detección:** El sistema de monitoreo detecta la caída en milisegundos.
-    *   **Redirección:** El DNS (Amazon Route 53) deja de enviar tráfico a la AZ 1 y lo dirige 100% a la **AZ 2**.
+    *   **Redirección:** El DNS deja de enviar tráfico a la AZ 1 y lo dirige 100% a la **AZ 2**.
     *   **Promoción:** La base de datos "esclava" en la AZ 2 se convierte en "maestra".
 4.  **Resultado:** Los usuarios finales no perciben la caída. El negocio mantiene su disponibilidad (**RTO cercano a cero**) y no hay pérdida de datos (**RPO de cero**) debido a la replicación previa entre zonas aisladas.
 

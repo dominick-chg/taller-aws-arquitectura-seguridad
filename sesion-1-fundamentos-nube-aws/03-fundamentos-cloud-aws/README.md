@@ -39,16 +39,16 @@ Para comprender la escala de AWS, debemos observar cómo los recursos físicos d
 
 1.  **Computación (Compute):**
     *   *Físico:* Servidores Blade, CPUs multinúcleo y placas base.
-    *   *Lógico:* **Instancias de Cómputo (ej. EC2)**. Capacidad de procesamiento elástica distribuida dinámicamente por el hipervisor.
+    *   *Lógico:* **Instancias de Cómputo**. Capacidad de procesamiento elástica distribuida dinámicamente por el hipervisor.
 2.  **Almacenamiento (Storage):**
     *   *Físico:* Discos mecánicos (HDD), estado sólido (SSD) y cabinas SAN/NAS conectadas por fibra.
-    *   *Lógico:* **Volúmenes de Bloque (EBS)** y **Almacenamiento de Objetos (S3)**. Capacidad infinita percibida por el usuario sin preocuparse por la degradación del hardware.
+    *   *Lógico:* **Volúmenes de Bloque** y **Almacenamiento de Objetos**. Capacidad infinita percibida por el usuario sin preocuparse por la degradación del hardware.
 3.  **Redes (Networking):**
     *   *Físico:* Switches, Routers, Firewalls físicos y kilómetros de cableado Spine-Leaf.
-    *   *Lógico:* **Virtual Private Clouds (VPC)**. Redes virtuales aisladas donde defines subredes y tablas de ruteo mediante clics o código.
+    *   *Lógico:* **Redes privadas virtuales**. Espacios lógicos aislados donde defines subredes y tablas de ruteo mediante clics, comandos o código.
 4.  **Bases de Datos (Databases):**
     *   *Físico:* Servidores dedicados con optimización de E/S y redundancia de disco.
-    *   *Lógico:* **Servicios Gestionados (ej. RDS, DynamoDB)**. Abstracción total donde no ves el sistema operativo ni el hardware, solo el motor de datos.
+    *   *Lógico:* **Servicios Gestionados**. Abstracción total donde no ves el sistema operativo ni el hardware, solo el motor de datos.
 
 ### 🌟 3. Las 5 Características Esenciales NIST
 Para que un servicio sea legítimamente considerado "Cloud Computing" según el estándar **NIST 800-145**, debe presentar simultáneamente estos cinco atributos. Si falta uno, estamos ante una implementación de TI tradicional o una virtualización parcial.
@@ -163,8 +163,8 @@ Estas ventajas son los pilares financieros y operativos del éxito de la adopci�
 2.  **Beneficiarse de enormes economías de escala:** Debido a la escala masiva de AWS, el costo unitario de los recursos es mucho menor que el que cualquier empresa individual podría lograr por su cuenta.
 3.  **Dejar de adivinar la capacidad:** En lugar de comprar hardware para el "peor de los casos", escalas dinámicamente según la carga real.
 4.  **Aumentar velocidad y agilidad:** Reduces el tiempo para obtener recursos de semanas a solo minutos, fomentando la experimentación.
-5.  **Dejar de gastar dinero en mantenimiento:** Elimina la carga de "levantar objetos pesados" (enfriamiento, cableado, gestión de racks).
-6.  **Alcance Global en Minutos:** Despliega tus aplicaciones en múltiples regiones geográficas con unos pocos clics, reduciendo la latencia para los usuarios finales.
+5.  **Dejar de invertir dinero en gestión y mantenimiento de centros de datos:** Elimina la carga de "levantar objetos pesados" (enfriamiento, cableado, gestión de racks).
+6.  **Alcance global en Minutos:** Despliega tus aplicaciones en múltiples regiones geográficas con unos pocos clics, reduciendo la latencia para los usuarios finales.
 
 ### 💳 3. Modelo de Consumo y Créditos
 La nube de AWS se basa en el concepto de **Utility Computing** (Cómputo como servicio público).
