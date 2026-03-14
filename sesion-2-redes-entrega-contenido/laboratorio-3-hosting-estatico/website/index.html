@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serverless AWS - CloudFront & S3</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Simulated logo image -->
+            <img src="assets/cloud-logo.svg" alt="Cloud Logo" class="logo">
+            <h1>AWS Serverless Web</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenido a tu sitio web estático global</h2>
+            <p>Este sitio web está alojado en <strong>Amazon S3</strong> y distribuido a través de <strong>Amazon CloudFront</strong>.</p>
+            <button id="action-btn">Ver Detalles Técnicos</button>
+            <div id="tech-details" class="hidden">
+                <p>🚀 <strong>Aceleración Edge:</strong> Contenido cacheadado cerca de los usuarios.</p>
+                <p>🔒 <strong>Seguridad OAC:</strong> El bucket S3 origen está bloqueado al público.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Laboratorio 3 - Taller Arquitectura y Seguridad en AWS</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
