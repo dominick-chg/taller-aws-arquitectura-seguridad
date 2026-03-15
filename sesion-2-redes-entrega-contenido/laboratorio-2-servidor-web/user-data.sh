@@ -17,7 +17,7 @@ cat <<EOF > /var/www/html/index.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AWS Web Server - \$PARTICIPANTE</title>
+    <title>AWS Web Server - $PARTICIPANTE</title>
     <style>
         body { font-family: Arial; background-color: #f4f4f9; color: #333; text-align: center; padding: 50px; }
         .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0,0,0,0.1); display: inline-block;}
@@ -28,12 +28,12 @@ cat <<EOF > /var/www/html/index.html
 <body>
     <div class="card">
         <h1>AWS Cloud Web Server</h1>
-        <h3>Desplegado por: \$PARTICIPANTE</h3>
+        <h3>Desplegado por: $PARTICIPANTE</h3>
         <p>Laboratorio 2: EC2, Redes y User Data</p>
         <div class="data">
-            <p><strong>🌐 IP Pública:</strong> \$IP_PUBLICA</p>
-            <p><strong>🔒 IP Privada:</strong> \$IP_PRIVADA</p>
-            <p><strong>📍 Zona de Disponibilidad:</strong> \$REGION_AZ</p>
+            <p><strong>🌐 IP Pública:</strong> $IP_PUBLICA</p>
+            <p><strong>🔒 IP Privada:</strong> $IP_PRIVADA</p>
+            <p><strong>📍 Zona de Disponibilidad:</strong> $REGION_AZ</p>
         </div>
     </div>
 </body>
